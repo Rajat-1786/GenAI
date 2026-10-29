@@ -1,0 +1,35 @@
+:root {
+  --navy: #1a1a2e;
+  --navy-soft: #24243d;
+  --sand: #e8d5b7;
+  --gold: #c9a96e;
+  --gold-dark: #b08f52;
+  --error: #b4443c;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Nunito Sans', -apple-system, 'Segoe UI', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--navy);
+  background: var(--navy);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+}
