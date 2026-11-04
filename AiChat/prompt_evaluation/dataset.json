@@ -1,0 +1,264 @@
+[
+  {
+    "description": "We're looking for a Frontend Developer to join our fast-growing startup. You should have 3 years of experience with React and TypeScript. Experience with CSS-in-JS libraries is a plus. You'll work on our customer-facing web application.",
+    "title": "Frontend Developer",
+    "skills": [
+      "React",
+      "TypeScript",
+      "CSS-in-JS"
+    ],
+    "years_of_experience": 3
+  },
+  {
+    "description": "Senior Data Scientist position at a Fortune 500 company. We need someone with 7 years of experience in machine learning, Python, and SQL. You'll lead a team of 5 data scientists and work on predictive analytics projects.",
+    "title": "Senior Data Scientist",
+    "skills": [
+      "machine learning",
+      "Python",
+      "SQL"
+    ],
+    "years_of_experience": 7
+  },
+  {
+    "description": "DevOps Engineer needed immediately. Must have experience with Docker, Kubernetes, and AWS. You should be comfortable with CI/CD pipelines and infrastructure as code. No specific experience requirement, but we prefer candidates with some background in these areas.",
+    "title": "DevOps Engineer",
+    "skills": [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "CI/CD"
+    ],
+    "years_of_experience": null
+  },
+  {
+    "description": "Full Stack Developer - 5-8 years required. We're building the next generation of SaaS products using Node.js, React, and PostgreSQL. You'll own features end-to-end and mentor junior developers.",
+    "title": "Full Stack Developer",
+    "skills": [
+      "Node.js",
+      "React",
+      "PostgreSQL"
+    ],
+    "years_of_experience": 5
+  },
+  {
+    "description": "Java Developer with 4 years of experience for our enterprise software division. Strong knowledge of Spring Boot, Hibernate, and microservices architecture required. Work with our distributed systems team on mission-critical applications.",
+    "title": "Java Developer",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "Hibernate",
+      "microservices"
+    ],
+    "years_of_experience": 4
+  },
+  {
+    "description": "QA Engineer - we're looking for someone with five years of experience in automated testing. Experience with Selenium, TestNG, and CI/CD integration is essential. You'll ensure our mobile and web applications meet quality standards.",
+    "title": "QA Engineer",
+    "skills": [
+      "automated testing",
+      "Selenium",
+      "TestNG",
+      "CI/CD"
+    ],
+    "years_of_experience": 5
+  },
+  {
+    "description": "iOS Developer needed for our mobile-first company. You'll need 6 years of Swift and Objective-C experience. Experience with Core Data and REST APIs is mandatory. Join our 12-person engineering team.",
+    "title": "iOS Developer",
+    "skills": [
+      "Swift",
+      "Objective-C",
+      "Core Data",
+      "REST APIs"
+    ],
+    "years_of_experience": 6
+  },
+  {
+    "description": "We're hiring a Solutions Architect! You should have deep expertise in cloud architecture, specifically AWS and Azure. Your background should include designing scalable systems and working with enterprise clients. 8+ years required.",
+    "title": "Solutions Architect",
+    "skills": [
+      "cloud architecture",
+      "AWS",
+      "Azure"
+    ],
+    "years_of_experience": 8
+  },
+  {
+    "description": "Product Manager for our B2B SaaS platform. Looking for someone with 3 years in product management. You'll work with engineering, design, and sales teams. Experience with analytics tools and user research methodologies is important.",
+    "title": "Product Manager",
+    "skills": [
+      "product management",
+      "analytics",
+      "user research"
+    ],
+    "years_of_experience": 3
+  },
+  {
+    "description": "Seeking a Network Engineer with Cisco certification and 5 years of hands-on experience. Knowledge of BGP, OSPF, and VPN configuration required. You'll manage our enterprise network infrastructure.",
+    "title": "Network Engineer",
+    "skills": [
+      "Cisco",
+      "BGP",
+      "OSPF",
+      "VPN"
+    ],
+    "years_of_experience": 5
+  },
+  {
+    "description": "ML Engineer - join our AI research team! We need someone proficient in TensorFlow, PyTorch, and Python. Experience with computer vision and NLP is a huge plus. 2 years minimum.",
+    "title": "ML Engineer",
+    "skills": [
+      "TensorFlow",
+      "PyTorch",
+      "Python",
+      "computer vision",
+      "NLP"
+    ],
+    "years_of_experience": 2
+  },
+  {
+    "description": "Database Administrator position. Manage and optimize our MySQL and MongoDB databases. You'll need experience with backup strategies, replication, and performance tuning. We're looking for someone with 4 years of DBA experience.",
+    "title": "Database Administrator",
+    "skills": [
+      "MySQL",
+      "MongoDB",
+      "replication",
+      "performance tuning"
+    ],
+    "years_of_experience": 4
+  },
+  {
+    "description": "Security Engineer - help us build secure systems! Expertise in penetration testing, vulnerability assessment, and OWASP top 10 vulnerabilities required. You should have 6 years of cybersecurity experience.",
+    "title": "Security Engineer",
+    "skills": [
+      "penetration testing",
+      "vulnerability assessment",
+      "OWASP"
+    ],
+    "years_of_experience": 6
+  },
+  {
+    "description": "We're looking for a Ruby on Rails Developer. You'll build web applications using Rails, PostgreSQL, and Redis. Must have 3 years of experience. Work in a relaxed, collaborative environment.",
+    "title": "Ruby on Rails Developer",
+    "skills": [
+      "Ruby on Rails",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "years_of_experience": 3
+  },
+  {
+    "description": "Graphic Designer for our creative agency. You should be proficient in Adobe Creative Suite, specifically Photoshop, Illustrator, and InDesign. 2 years of design experience required. Portfolio must be provided.",
+    "title": "Graphic Designer",
+    "skills": [
+      "Adobe Creative Suite",
+      "Photoshop",
+      "Illustrator",
+      "InDesign"
+    ],
+    "years_of_experience": 2
+  },
+  {
+    "description": "We need a Technical Writer to document our software products. You'll work with engineers to create API documentation and user guides. Experience with Markdown, Git, and technical communication is essential.",
+    "title": "Technical Writer",
+    "skills": [
+      "Markdown",
+      "Git",
+      "technical communication"
+    ],
+    "years_of_experience": null
+  },
+  {
+    "description": "Systems Administrator - 7 years of Linux and Windows server management required. Must be proficient in Active Directory, Group Policy, and shell scripting. You'll manage our infrastructure for 500+ employees.",
+    "title": "Systems Administrator",
+    "skills": [
+      "Linux",
+      "Windows",
+      "Active Directory",
+      "Group Policy",
+      "shell scripting"
+    ],
+    "years_of_experience": 7
+  },
+  {
+    "description": "Angular Developer wanted! Build dynamic single-page applications with Angular, TypeScript, and RxJS. You should have worked with REST APIs and have 4 years of experience.",
+    "title": "Angular Developer",
+    "skills": [
+      "Angular",
+      "TypeScript",
+      "RxJS",
+      "REST APIs"
+    ],
+    "years_of_experience": 4
+  },
+  {
+    "description": "Hiring a C++ Software Engineer for our gaming studio. You'll develop high-performance game engines using C++, DirectX, and graphics programming. 5 years minimum.",
+    "title": "C++ Software Engineer",
+    "skills": [
+      "C++",
+      "DirectX",
+      "graphics programming"
+    ],
+    "years_of_experience": 5
+  },
+  {
+    "description": "Business Analyst needed for our consulting firm. You'll gather requirements, create specifications, and work with stakeholders. 3 years of business analysis experience required.",
+    "title": "Business Analyst",
+    "skills": [
+      "requirements gathering",
+      "specifications",
+      "stakeholder management"
+    ],
+    "years_of_experience": 3
+  },
+  {
+    "description": "Help Desk Technician - provide IT support to our 200-person company. Troubleshoot hardware, software, and network issues daily. Knowledge of ticketing systems and basic networking is essential. No experience required, we'll train!",
+    "title": "Help Desk Technician",
+    "skills": [
+      "troubleshooting",
+      "ticketing systems",
+      "networking"
+    ],
+    "years_of_experience": []
+  },
+  {
+    "description": "URGENT HIRING: We're looking for a Software Architect with extensive experience in microservices architecture, containerization using Docker, orchestration with Kubernetes, cloud-native design patterns, distributed systems, API gateway implementation, service mesh technologies like Istio, event-driven architecture using Kafka or RabbitMQ, and domain-driven design principles. Must also be familiar with CI/CD pipelines, infrastructure as code with Terraform, monitoring and observability using Prometheus and ELK stack, and have strong knowledge of scalability patterns. You should have 10+ years of software development experience, preferably 5+ years in architecting large-scale distributed systems. Join our enterprise team and help us build the future of cloud computing!",
+    "title": "Software Architect",
+    "skills": [
+      "microservices",
+      "Docker",
+      "Kubernetes",
+      "API gateway",
+      "Kafka",
+      "RabbitMQ",
+      "Terraform",
+      "Prometheus",
+      "ELK stack"
+    ],
+    "years_of_experience": 10
+  },
+  {
+    "description": "PHP Backend Developer - small 10-person team, flat hierarchy. We use PHP, Laravel, and MySQL for our web platform. Comfortable with REST APIs and git workflows.",
+    "title": "PHP Backend Developer",
+    "skills": [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "REST APIs",
+      "git"
+    ],
+    "years_of_experience": null
+  },
+  {
+    "description": "The quick brown fox jumps over the lazy dog. We're looking for someone to help with our marketing campaign next quarter. Our budget is $50,000 and we need results by summer. Please send your resume to hr@company.com.",
+    "title": "Marketing Manager",
+    "skills": [],
+    "years_of_experience": null
+  },
+  {
+    "description": "Golang Developer",
+    "title": "Golang Developer",
+    "skills": [],
+    "years_of_experience": null
+  }
+]

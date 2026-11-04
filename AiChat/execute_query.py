@@ -1,3 +1,4 @@
+from fastapi import HTTPException
 import json
 from dotenv import load_dotenv
 from anthropic import AsyncAnthropic
@@ -6,16 +7,15 @@ import config
 
 load_dotenv()
 class execute_query:
-    def __init__(self):
-        self.client = AsyncAnthropic()
+    def __init__(self, client : AsyncAnthropic):
+        self.client = client
 
-    async def chat(self, messages, system_prompt= None):
+    async def chat(self, messages, system_prompt= None, temperature=0.0):
         params ={
             "model": config.model,
             "max_tokens": config.max_tokens,
             "messages": messages,
-            "temperature": 0.0
-            # "stream": config.stream uncomment it if we need to use create method
+            "temperature": temperature
         }
 
         if system_prompt:
@@ -26,8 +26,9 @@ class execute_query:
             return {"message": message.content[0].text, "input_tokens": message.usage.input_tokens, "output_tokens": message.usage.output_tokens} 
         except Exception as e:
             print(f"Error executing query: {e}")
-            return None
+            raise HTTPException(status_code=502, detail="Error executing query")
 
+    
     async def stream(self,messages, system_prompt= None):
         params = {
             "model": config.model,
@@ -48,12 +49,12 @@ class execute_query:
             "input_tokens": message.usage.input_tokens, 
             "output_tokens": message.usage.output_tokens
             })
-
-
-    async def generate_policy(self, description, system_prompt=None):
+        
+    async def get_json_response(self, description, system_prompt=None, temperature=0.0):
         params ={
             "model": config.model,
             "max_tokens": config.max_tokens,
+            "temperature": temperature,
             "messages":[
                 {
                     "role": "user",
@@ -73,12 +74,12 @@ class execute_query:
         try:
             message =await self.client.messages.create(**params)
             print(f"Message: {message}")
-            return json.loads(message.content[0].text)
+            return message.content[0].text
         except Exception as e:
-            print(f"Error generating policy: {e}")
-            return None
+            print(f"Error generating response: {e}")
+            raise HTTPException(status_code=502, detail="Error generating Response")
 
-
+    
 
 
 

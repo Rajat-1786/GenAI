@@ -8,7 +8,7 @@ auth_router = APIRouter(
 
 @auth_router.post("/signup", status_code=status.HTTP_201_CREATED)
 async def signup(signup_request: SignupRequest):
-    print(f"Received signup request for user: {signup_request.user_name}, email: {signup_request.email} password: {signup_request.password}, confirm_password: {signup_request.confirm_password}")
+    print(f"Received signup request for user: {signup_request.user_name}, email: {signup_request.email} ")
     # Implement signup logic here
     return {"message": "Signup successful"}
 
