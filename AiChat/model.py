@@ -26,4 +26,9 @@ class JobDescriptionResponse(BaseModel):
     title: str = Field(..., description="The title of the job")
     skills: List[str] = Field(..., description="A list of skills required for the job")
     years_of_experience: int | None = None
-    
+
+class QueryResponse(BaseModel):
+    text: str  = Field(..., description="Chunk on which the answer will be generated")
+    source: str = Field(..., description="from which pdf the chunk is referred")
+    page: int = Field(..., description="page number")
+    score: float = Field(..., description="cosine similarity (1 - cosine distance)")

@@ -1,0 +1,62 @@
+[
+  {
+    "valid": 1,
+    "source": 1,
+    "actual": "1-Core_building_blocks_notes.pdf",
+    "expected": "1-Core_building_blocks_notes.pdf"
+  },
+  {
+    "valid": 1,
+    "source": 1,
+    "actual": "1-Core_building_blocks_notes.pdf",
+    "expected": "1-Core_building_blocks_notes.pdf"
+  },
+  {
+    "valid": 1,
+    "source": 1,
+    "actual": "1-Core_building_blocks_notes.pdf",
+    "expected": "1-Core_building_blocks_notes.pdf"
+  },
+  {
+    "valid": 1,
+    "source": 1,
+    "actual": "1-Core_building_blocks_notes.pdf",
+    "expected": "1-Core_building_blocks_notes.pdf"
+  },
+  {
+    "valid": 1,
+    "source": 1,
+    "actual": "2-Network & communication_Notes.pdf",
+    "expected": "2-Network & communication_Notes.pdf"
+  },
+  {
+    "valid": 1,
+    "source": 1,
+    "actual": "2-Network & communication_Notes.pdf",
+    "expected": "2-Network & communication_Notes.pdf"
+  },
+  {
+    "valid": 1,
+    "source": 1,
+    "actual": "2-Network & communication_Notes.pdf",
+    "expected": "2-Network & communication_Notes.pdf"
+  },
+  {
+    "valid": 1,
+    "source": 1,
+    "actual": "3-Distributed_Systems_Handwritten_Notes.pdf",
+    "expected": "3-Distributed_Systems_Handwritten_Notes.pdf"
+  },
+  {
+    "valid": 1,
+    "source": 1,
+    "actual": "3-Distributed_Systems_Handwritten_Notes.pdf",
+    "expected": "3-Distributed_Systems_Handwritten_Notes.pdf"
+  },
+  {
+    "valid": 1,
+    "source": 1,
+    "actual": "3-Distributed_Systems_Handwritten_Notes.pdf",
+    "expected": "3-Distributed_Systems_Handwritten_Notes.pdf"
+  }
+]

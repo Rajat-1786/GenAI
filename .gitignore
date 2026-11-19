@@ -4,3 +4,5 @@ __pycache__/
 *.pyc
 .qodo/
 *.pdf
+chroma_db/
+corpus/

@@ -219,7 +219,7 @@
       "ticketing systems",
       "networking"
     ],
-    "years_of_experience": []
+    "years_of_experience": null
   },
   {
     "description": "URGENT HIRING: We're looking for a Software Architect with extensive experience in microservices architecture, containerization using Docker, orchestration with Kubernetes, cloud-native design patterns, distributed systems, API gateway implementation, service mesh technologies like Istio, event-driven architecture using Kafka or RabbitMQ, and domain-driven design principles. Must also be familiar with CI/CD pipelines, infrastructure as code with Terraform, monitoring and observability using Prometheus and ELK stack, and have strong knowledge of scalability patterns. You should have 10+ years of software development experience, preferably 5+ years in architecting large-scale distributed systems. Join our enterprise team and help us build the future of cloud computing!",
@@ -253,7 +253,8 @@
     "description": "The quick brown fox jumps over the lazy dog. We're looking for someone to help with our marketing campaign next quarter. Our budget is $50,000 and we need results by summer. Please send your resume to hr@company.com.",
     "title": "Marketing Manager",
     "skills": [],
-    "years_of_experience": null
+    "years_of_experience": null,
+    "expected_error": true
   },
   {
     "description": "Golang Developer",

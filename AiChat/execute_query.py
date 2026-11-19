@@ -22,7 +22,7 @@ class execute_query:
             params["system"] = system_prompt
         try:
             message =await self.client.messages.create(**params)
-            print(f"Message: {message}")
+            # print(f"Message: {message}")
             return {"message": message.content[0].text, "input_tokens": message.usage.input_tokens, "output_tokens": message.usage.output_tokens} 
         except Exception as e:
             print(f"Error executing query: {e}")
@@ -73,7 +73,7 @@ class execute_query:
 
         try:
             message =await self.client.messages.create(**params)
-            print(f"Message: {message}")
+            # print(f"Message: {message}")
             return message.content[0].text
         except Exception as e:
             print(f"Error generating response: {e}")

@@ -1,0 +1,152 @@
+[
+  {
+    "query": [
+      "A server is nearing its CPU and memory limits, traffic is unpredictable, and a machine outage takes the service down. Compare scaling up with scaling out in terms of capacity, failure tolerance, cost, downtime, and operational complexity.",
+      "A login service stores sessions in each server's memory, but a load balancer sends each request to a different instance. How could the system become stateless, and where could session state be stored instead?",
+      "A load balancer routes requests among three servers, one of which is unhealthy. Compare Layer 4 and Layer 7 routing, and explain how health checks and a routing policy can keep traffic away from the unhealthy server.",
+      "An application uses cache-aside for frequently requested database records. Trace the cache-hit and cache-miss paths, and explain the consistency risk when a record changes in the database.",
+      "Users in distant regions repeatedly fetch the same large static assets from one origin. Explain how a CDN edge cache reduces latency and origin traffic, and how its cache lifetime affects content freshness.",
+      "A product profile has a flexible shape and is usually read with its related data, while another workload requires strict transactions and many-to-many joins. Compare when a document database and a relational database fit these workloads.",
+      "A database query uses either exact key lookups or range scans, while writes are frequent. Compare a hash index with a B-tree index and explain which workload each serves better.",
+      "A replicated service must continue operating during a network partition. Explain the CAP trade-off between consistency and availability, and why partition tolerance cannot simply be ignored in a distributed system.",
+      "A user reads a recently updated inventory item from different replicas. Compare strong consistency with eventual consistency and identify which guarantee matters if stale inventory could allow overselling.",
+      "You are designing a horizontally scaled API with session data and shared cached records. Explain how stateless application instances, a load balancer, an external state store, and a cache fit together, including the main failure trade-offs."
+    ],
+    "source": "1-Core_building_blocks_notes.pdf"
+  },
+  {
+    "query": [
+      "A user enters a domain name that is not cached in the browser or operating system. Trace the DNS lookup through the recursive resolver, root, TLD, and authoritative name server, and explain where TTL-based caching occurs.",
+      "An organization changes a DNS record and wants the change to propagate quickly, but also wants to avoid excessive resolver traffic. Explain how TTL affects this trade-off.",
+      "A client times out after sending a request and wants to retry safely. Compare GET, POST, PUT, PATCH, and DELETE by their typical purpose and idempotency, and explain why idempotency matters for retries.",
+      "A client must protect API traffic from eavesdropping and tampering. Describe how HTTPS and the TLS handshake use certificates and asymmetric and symmetric cryptography.",
+      "A real-time media service can tolerate occasional lost packets but cannot tolerate the delay of retransmission. Compare TCP and UDP and explain which transport fits this requirement and why.",
+      "A browser needs to fetch many resources efficiently. Compare HTTP/1.1, HTTP/2, and HTTP/3 in connection use, multiplexing, and transport-level head-of-line blocking.",
+      "A browser-based dashboard needs server updates without repeatedly polling. Compare polling, long polling, and WebSockets, and explain why a persistent full-duplex connection may suit this dashboard.",
+      "A public API has simple CRUD endpoints, clients that need custom response fields, and internal services that benefit from strongly typed RPC. Compare REST, GraphQL, and gRPC for these clients.",
+      "An API must allow short bursts but limit a client's average request rate. Explain how a token bucket behaves and compare it with a fixed-window limiter, including a possible boundary effect.",
+      "A work producer must continue while consumers are slow, and the system has requirements around ordering and operations. Compare Kafka, RabbitMQ, and a managed queue such as SQS using their data and delivery models."
+    ],
+    "source": "2-Network & communication_Notes.pdf"
+  },
+  {
+    "query": [
+      "A cluster needs agreement on a replicated log even when messages are delayed or nodes fail. Compare Paxos and Raft in their roles, leader model, and majority-based commit process.",
+      "A Raft follower stops receiving heartbeats from its leader. Describe how terms, election timeouts, candidacy, voting, and a new leader's heartbeats coordinate the election.",
+      "A consensus group must continue committing entries after node failures. Explain why a majority quorum is required and how a cluster of 2f+1 nodes can tolerate f failures.",
+      "A worker acquires a Redis-style distributed lock and then crashes. Explain how a TTL prevents the lock from being held forever and why release should verify a unique ownership token.",
+      "A lock holder pauses until its lock expires, while a second worker acquires the lock and writes. Explain how fencing tokens let the protected resource reject the stale worker's write.",
+      "A client times out after submitting a payment and retries the request. Explain how an idempotency key can make repeated requests return the same result without charging twice.",
+      "A coordinator must detect whether a process is alive and whether it can accept traffic. Distinguish liveness and readiness probes, and explain how heartbeats can help detect failures.",
+      "A distributed cache adds or removes servers, and the team wants to minimize how many keys move. Explain how consistent hashing maps nodes and keys and why it reduces redistribution.",
+      "Two replicas update shared state while disconnected and later exchange events. Explain how vector clocks can distinguish causally ordered events from concurrent updates without synchronized wall clocks.",
+      "A replicated store has N copies and selects read quorum R and write quorum W. Explain why choosing W + R > N creates an overlap and how that can help reads observe a recent write."
+    ],
+    "source": "3-Distributed_Systems_Handwritten_Notes.pdf"
+  },
+  {
+    "query": [
+      "A primary database stops responding while replicas are available. Describe the automatic failover sequence from health detection through promotion and client redirection, and explain why the most up-to-date replica matters.",
+      "The old primary returns after a replica has been promoted. Explain the split-brain risk and why the recovered node must be prevented from accepting writes as a second primary.",
+      "A remote dependency is failing and requests are piling up. Describe the closed, open, and half-open circuit-breaker states and how they protect the caller while probing for recovery.",
+      "A service retries failed requests using exponential backoff with jitter. Explain how the delay changes across attempts and why random jitter reduces synchronized retry spikes.",
+      "A dependency is overloaded, and every client immediately retries on failure. Explain how retry storms can worsen an outage and what retry limits, backoff, and circuit breaking change.",
+      "A company plans for a regional outage and has limits on acceptable data loss and recovery time. Distinguish RPO from RTO and explain how replication affects those objectives.",
+      "An incident dashboard shows a service is slow but not why. Explain how logs, metrics, and distributed traces provide different but complementary observability signals.",
+      "A recommendation service is unavailable, but the main product page should still work. Describe graceful degradation and give examples of useful fallback responses instead of failing the whole request.",
+      "A slow dependency is exhausting a shared thread pool and blocking unrelated services. Explain how bulkheads isolate resource pools and limit the blast radius.",
+      "A remote API has intermittent failures and a slow recovery. Explain how a system can combine timeouts, bounded retries with jitter, a circuit breaker, and isolated resource pools to reduce cascading failures."
+    ],
+    "source": "4-Resilience_Reliability_Handwritten_Notes.pdf"
+  },
+  {
+    "query": [
+      "A signed-in user attempts to delete another user's post. Distinguish authentication from authorization, explain why authorization must be checked for the request, and compare the expected 401 and 403 cases.",
+      "A mobile app needs a user to grant limited access to a third-party service without sharing the user's password. Explain the OAuth authorization-code flow and how PKCE protects a public client.",
+      "A backend service needs to call another service without a user present. Compare the OAuth client-credentials grant with an authorization-code flow and identify when each is appropriate.",
+      "An application needs both delegated API access and a standardized way to authenticate the user. Explain the difference between OAuth 2.0 and OpenID Connect.",
+      "An API accepts a JWT containing a role and an expiration time. Explain the roles of the header, payload, and signature, and why reading the payload alone does not prove the token is trustworthy.",
+      "Several microservices independently implement TLS termination, authentication, and rate limiting. Explain how an API gateway can centralize these cross-cutting controls and what it does not replace.",
+      "A company stores sensitive records and serves them over a network. Compare encryption in transit with encryption at rest and describe the different exposure each is intended to reduce.",
+      "A password-only login is considered insufficient for sensitive accounts. Explain how MFA adds an authentication factor and how it differs from authorization.",
+      "A user can access one resource but not another. Compare role-based access control, scopes or permissions, ABAC policies, and ACLs as ways to express authorization decisions.",
+      "A third-party app requests access to a user's data. Explain why OAuth tokens are preferable to sharing the user's password and how limiting token scope reduces the app's permissions."
+    ],
+    "source": "5-Security_Handwritten_Notes.pdf"
+  },
+  {
+    "query": [
+      "A bank transfer debits one account and credits another, then the database crashes. Explain how atomicity, consistency, isolation, and durability apply to the transfer.",
+      "Two transactions read and update the same records concurrently. Explain what isolation protects and how dirty reads, non-repeatable reads, and phantom reads relate to isolation levels.",
+      "An order update must commit across several independent databases. Describe the prepare and vote phase and the commit-or-abort decision in two-phase commit.",
+      "A user profile contains a variable number of addresses and orders, usually fetched together. Compare a document data model with relational tables, including locality, schema flexibility, and join trade-offs.",
+      "A service needs sub-millisecond lookups for sessions by unique key, with no complex joins. Explain why a key-value store fits and what trade-offs it makes compared with a relational database.",
+      "A time-series workload needs very high write throughput across many machines and can use a partition key to distribute rows. Explain how a wide-column store organizes this data and why partition-key selection matters.",
+      "An application frequently asks for friends-of-friends or related products several steps away. Explain why a graph database can handle relationship traversal differently from repeated relational joins.",
+      "A media service stores large files that need high durability and scale, rather than querying their internal fields as database rows. Explain how object storage organizes objects and how that differs from a filesystem.",
+      "An operational application handles many small transactions while analysts run large historical scans. Compare OLTP and OLAP workloads and explain why separating their systems can help.",
+      "An analytics team needs a clean warehouse from application databases, third-party APIs, and logs. Describe the extract, transform, and load stages and why transformation happens before warehouse analysis."
+    ],
+    "source": "6-Databases_DataSystems_Handwritten_Notes.pdf"
+  },
+  {
+    "query": [
+      "An application has nested profile data but also needs many-to-many relationships and joins. Compare document and relational models, including locality, schema flexibility, and the cost of cross-references.",
+      "A document database stores a user and all related data together to avoid joins. Explain when this locality helps and how duplicated data can make updates harder to keep consistent.",
+      "A social application must find multi-hop relationships such as friends of friends. Explain how graph models represent vertices and edges and why traversal can be more natural than relational joins.",
+      "A key-value storage engine appends updates to a log and later merges old segments. Explain why append-only writes are useful and how tombstones and compaction handle deletions and overwritten values.",
+      "An LSM-tree loses its in-memory memtable after a crash. Explain how a write-ahead log supports recovery and how later flushes and compaction organize data into sorted tables.",
+      "A B-tree lookup starts at a root page and navigates to a leaf. Explain how key ranges and child pointers guide the search and how leaf-page sibling links help range scans.",
+      "An LSM-based database has many sorted segments and reads for absent keys are expensive. Explain how Bloom filters help avoid checking every segment and what a negative result guarantees.",
+      "An analytics query reads a few columns from billions of rows. Compare row-oriented and column-oriented storage and explain why column stores can reduce the data read for this query.",
+      "A team evolves a Protocol Buffers message while old and new services run together. Explain the purpose of field tags and why adding a new optional field is safer than reusing or changing a tag.",
+      "A producer and consumer use different Avro schema versions during a rolling upgrade. Explain how writer and reader schemas are resolved and how defaults or aliases help schema evolution."
+    ],
+    "source": "DDIA_Ch2-3-4_Handwritten_Notes.pdf"
+  },
+  {
+    "query": [
+      "A data-intensive service must keep working correctly through hardware, software, and human errors. Explain what reliability means and how it differs from simply keeping a process running.",
+      "A disk fails but a redundant copy keeps serving users. Distinguish a fault from a failure and explain why fault-tolerant design aims to prevent individual faults from becoming service failures.",
+      "A team is classifying hardware faults, software faults, and human mistakes. Explain why each category can affect reliability and give an example of how a system might tolerate it.",
+      "The same bad input crashes every replica because they run identical code. Explain why this systematic software fault is correlated across nodes and can be more dangerous than an independent hardware fault.",
+      "A service expects traffic to double next year. Explain why engineers should first describe current load using relevant parameters before selecting a scalability strategy.",
+      "An application is outgrowing one machine. Compare vertical and horizontal scaling and explain how a shared-nothing design changes the way capacity is added.",
+      "A system is difficult to operate and modify even though it meets current performance goals. Explain how operability, simplicity, and evolvability contribute to maintainability.",
+      "A team reports only average latency while users complain that a minority of requests are very slow. Explain why performance measurements should reflect the workload and user-visible response behavior, not just an average.",
+      "A system's request volume increases but response times remain stable after adding resources. Explain how this demonstrates scalability and why the load pattern matters when evaluating the result.",
+      "A long-lived data system is reliable and scalable but expensive to change. Explain why reliability, scalability, and maintainability are distinct system goals and how ignoring one can undermine the others."
+    ],
+    "source": "DDIA_Chapter1_Handwritten_Notes.pdf"
+  },
+  {
+    "query": [
+      "A notification product supports phone alerts and inbox messages for millions of users. Which delivery channels should the design account for, and what requirements should be clarified before choosing an architecture?",
+      "An iOS push notification must reach a specific device. Explain the roles of the provider, APNs, device token, payload, and provider credentials in sending it.",
+      "A user has several phones and tablets, each with a different push token. Explain why the data model should represent a one-to-many relationship between users and devices.",
+      "Email and SMS providers have variable latency, and the notification API should respond quickly. Explain how per-channel message queues and workers decouple request handling from delivery.",
+      "A notification provider may fail after the system accepts a message. Explain why persistence and retries reduce data loss, and why distributed delivery can still create duplicate notifications.",
+      "A third-party delivery service repeatedly fails. Describe how a worker can retry by returning a message to its queue, when developers should be alerted, and what queue metrics help monitor backlog.",
+      "An untrusted client can call the notification API to send push messages. Explain how app credentials authenticate clients and why that is separate from the authorization to send a particular notification.",
+      "A burst of clients overwhelms notification servers. Explain how rate limiting can protect the API and how horizontal scaling and queues help absorb bursts without blocking on slow providers.",
+      "A notification system must support push, SMS, and email while some channels are unavailable. Explain how separating channel queues and workers can isolate failures and allow independent retries.",
+      "Product managers need to know whether users clicked delivered notifications. Explain how analytics can be added to the notification pipeline and why it should not block message delivery."
+    ],
+    "source": "P10-Notification_System_Handwritten_Notes.pdf"
+  },
+  {
+    "query": [
+      "A search engine must collect billions of pages, handle new and edited content, and ignore duplicates. Explain which functional and non-functional requirements should be clarified before designing the crawler.",
+      "A crawler starts with seed URLs and finds links on fetched pages. Describe the URL frontier, downloader, parser, content-seen check, storage, and link-extraction stages.",
+      "A downloader fetches a page containing many links. Trace how discovered URLs are filtered and checked for prior visits before being returned to the frontier.",
+      "A crawler can use depth-first or breadth-first traversal. Compare their behavior on a deep web graph and explain why one may find broad coverage more effectively.",
+      "Several workers crawl the same host concurrently. Explain how per-host FIFO queues, host-to-queue mapping, and delays enforce politeness while other hosts are processed in parallel.",
+      "A crawler has a limited download budget and some URLs are much more valuable than others. Explain how a prioritizer can order URLs and what signals could influence priority.",
+      "A site publishes robots.txt rules and the crawler revisits it frequently. Explain how the downloader should use robots.txt and why caching those rules is useful.",
+      "A crawler downloads the same page repeatedly and spends time on slow or malformed responses. Explain how duplicate detection, validation, and downloader optimizations improve efficiency and robustness.",
+      "A crawler is distributed across downloader servers, and servers may be added or removed. Explain how consistent hashing can distribute URL work while minimizing reassignment.",
+      "A crawler must add image downloading and monitoring without rewriting its core pipeline. Explain how extension modules, saved crawl state, and fault recovery support evolvability and robustness."
+    ],
+    "source": "P9- Web_Crawler_Handwritten_Notes.pdf"
+  }
+]

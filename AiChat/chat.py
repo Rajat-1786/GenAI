@@ -77,7 +77,12 @@ async def generate_policy(description: str, executor: execute_query = Depends(ge
 @chat_router.post("/extract", status_code=status.HTTP_200_OK, response_model=JobDescriptionResponse)
 async def extract(job_description_request: JobDescriptionRequest, executor: execute_query = Depends(get_executor)):
     description = job_description_request.description
-    system_prompt = "You are a helpful assistant. Extract the title, skills and Years of Experience from the following job description and return only JSON with keys title, skills, years_of_experience"
+    system_prompt = """You are a helpful assistant. Extract the title, skills and Years of Experience from the following job description and return only JSON with keys title, skills, years_of_experience" \
+            Rule:
+            1.  Treat No specific experience requirement as null for years_of_experience.
+            2.  if Years of experience is in range then fetch the lowest value 
+            3.  if job Description seems incorrect return the empty list of skills 
+        """
     last_exception = None
     for i in range(2):
         temp = 0.0 if i == 0 else 0.3
